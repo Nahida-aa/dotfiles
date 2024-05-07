@@ -1,6 +1,6 @@
 # migrate
 
-## Visual Studio Code
+## [Visual Studio Code](/vscode/README.md)
 
 ## network
 
