@@ -73,13 +73,39 @@ https://github.com/chrisant996/clink
 
 ### [Snipaste](/tools/Snipaste/README.md)
 
+```md
+截图工具
+```
+
 ### [keyviz](/tools/keyviz/README.md)
 
 ```md
 键盘可视化工具，它可以实时显示你按下的键，这对于编程、写作、游戏或者教学都非常有用
 ```
 
+### 7-Zip
+
+### Voice
+
+#### PotPlayer
+
+#### Voicemeeter
+
+#### Control panel
+
+#### tts-vue
+
+### 格式工厂
+
+### CCleaner
+
 ### [pacedesk DRIVER Console](/tools/pacedesk_DRIVER_Console/README.md)
+
+### VirtualMachine
+
+#### Oracle VM VirtualBox
+
+#### VMware Workstation Pro
 
 ## beautify
 
