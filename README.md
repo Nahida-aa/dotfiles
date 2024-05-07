@@ -87,13 +87,29 @@ https://github.com/chrisant996/clink
 
 ### Voice
 
-#### PotPlayer
+#### [PotPlayer](/tools/PotPlayer/README.md)
 
-#### Voicemeeter
+```md
+由韩国 Daum Communications 开发的多媒体播放器。它支持各种视频和音频格式，包括但不限于 AVI, MP4, FLV, WMV, MOV, RMVB, FLAC, AAC 等
+```
 
-#### Control panel
+#### [Voicemeeter](/tools/Voicemeeter/README.md)
 
-#### tts-vue
+```md
+虚拟音频混音器软件，由 VB-Audio Software 开发。它可以让你在电脑上控制和管理多个音频输入和输出
+```
+
+#### [Virtual Audio Cable](/tools/Virtual_Audio_Cable/README.md)
+
+```md
+由 VB-Audio Software 开发的音频设备驱动程序。它可以创建虚拟的音频设备，这些设备可以用来路由和混合音频信号
+```
+
+#### [tts-vue](/tools/tts-vue/README.md)
+
+```md
+Text-to-Speech
+```
 
 ### 格式工厂
 
