@@ -125,4 +125,10 @@ Text-to-Speech
 
 ## beautify
 
+### font
+
+CodeNewRoman Nerd Font Mono
+
+### 任务栏
+
 ## safe_secure
