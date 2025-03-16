@@ -4,8 +4,6 @@
   // 工作区 颜色 自定义
   "workbench.colorCustomizations": {
     "[SynthWave '84]": {
-
-
       // "badge.background": "#f92aad",
       // "badge.foreground": "#2a2139",
       // "button.background": "#f92aad",
@@ -32,7 +30,6 @@
 
       // 鼠标悬停提示背景色
       "editorCursor.foreground": "#2af998",
-
       // "editorGutter.modifiedBackground": "#b893ce8f",
       // "editorGutter.addedBackground": "#206d4bd6",
       // "editorGutter.deletedBackground": "#fa2e46a4",
@@ -473,10 +470,12 @@
   //字体
   // "editor.fontFamily": "'Monaspace Neon'", // Radon
   // "editor.fontFamily": "'Monaspace Radon', monospace",
-  // "editor.fontFamily": "CodeNewRoman Nerd Font Mono",
-  // "editor.fontFamily": "JetBrains Mono Nerd Font",
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv30', 'cv60'",
-  "terminal.integrated.fontFamily": "CodeNewRoman Nerd Font Mono",
+  // "editor.fontFamily": "CodeNewRoman Nerd Font Mono",al10
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', monospace", 
+  "editor.fontLigatures": "'calt', 'liga', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv30', 'cv60'",
+  // calt 是 OpenType 字体功能中的一个标签，代表 "Contextual Alternates"（上下文替换）。它用于在特定上下文中替换字符，以改善文本的可读性或美观性。
+  // 'ss01',: 疑似衬线字体
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   // 样式
   "editor.cursorStyle": "block",
   // "editor.cursorWidth": 2,
@@ -485,10 +484,10 @@
   // "vscode_custom_css.policy": true,
   //自定义主题
   "vscode_custom_css.imports": [
-    "file:///D:/VSCode_Custom/Extensions/Custom_CSS_and_JS_Loader/custom/glow.css",
-    "file:///D:/VSCode_Custom/Extensions/Custom_CSS_and_JS_Loader/custom/vscode_icon.css",
-    "file:///D:/VSCode_Custom/Extensions/Custom_CSS_and_JS_Loader/custom/transparent.js",
-    "file:///D:/VSCode_Custom/Extensions/Custom_CSS_and_JS_Loader/custom/index.js"
+    "file://${userHome}/repos/env_ls/dotfiles/vscode/Extensions/Custom_CSS_and_JS_Loader/custom/glow.css",
+    "file://${userHome}/repos/env_ls/dotfiles/vscode/Extensions/Custom_CSS_and_JS_Loader/custom/vscode_icon.css",
+    "file://${userHome}/repos/env_ls/dotfiles/vscode/Extensions/Custom_CSS_and_JS_Loader/custom/transparent.js",
+    "file://${userHome}/repos/env_ls/dotfiles/vscode/Extensions/Custom_CSS_and_JS_Loader/custom/index.js"
     // "file:///c:/Users/aa/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
   ],
 
