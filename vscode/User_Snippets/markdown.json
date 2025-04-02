@@ -18,16 +18,20 @@
 			"---",
 			"title: ${1:Title}",
 			"description: ",
-			"image: ",
 			"created_at: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}Z",
-			"pushed_at: ",
 			"updated_at: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}Z",
 			"tags: []",
-			"private: false",
-			"draft: false",
 			"---",
 			""
 		],
 		"description": "Generate MDX metadata"
-	}
+	},
+	"Mdx updated_at": {
+		"prefix": "mdxupdated",
+		"body": [
+			"updated_at: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}Z",
+			""
+		],
+		"description": "Update MDX updated_at"
+	},
 }

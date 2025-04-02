@@ -1,7 +1,9 @@
 {
+
   "synthwave84.brightness": 0.45,
   "editor.fontSize": 16,
   // 工作区 颜色 自定义
+  "editor.semanticHighlighting.enabled": true,
   "workbench.colorCustomizations": {
     "[SynthWave '84]": {
       // "badge.background": "#f92aad",
@@ -30,6 +32,7 @@
 
       // 鼠标悬停提示背景色
       "editorCursor.foreground": "#2af998",
+
       // "editorGutter.modifiedBackground": "#b893ce8f",
       // "editorGutter.addedBackground": "#206d4bd6",
       // "editorGutter.deletedBackground": "#fa2e46a4",
@@ -144,7 +147,7 @@
     "[SynthWave '84]": {
       "textMateRules": [
         // text
-        {
+        { // 3
           "name": "text",
           "scope": [
             "source",
@@ -156,13 +159,17 @@
             // "fontStyle": "italic"
           }
         },
-        // func
-        {
-          "name": "function and md heading",
+        
+        { // 4 // func
+          "name": "function",
           "scope": [
+            "support.function.builtin",
             "entity.name.function", 
+            "variable.function.builtin",
             "support.class.component",
-            "markup.heading.markdown",
+            "meta.function-call.generic", // TODO: 可能有问题, 直接注释
+            // md
+            "markup.quote", // 引用,
           ],
           "settings": { "foreground": "#83f8f6", }
         },
@@ -192,7 +199,7 @@
         // },
 
         // class
-        {
+        { // 5
           "name": "Class",
           "scope": [
             "entity.name.type",
@@ -201,6 +208,7 @@
             "support.type",
             "meta.definition.class.inherited.classes", // 继承的类
             "meta.definition.class.implemented.interfaces", // 实现(继承)的接口
+            "storage.type.go",
             "storage.type.java", // java 中 声明一个变量 比较特殊, storage.type 在其他语言中 指: const, let, var
             "storage.type.annotation.java", // 同上特殊对待
             // "meta.class",
@@ -213,6 +221,7 @@
             "entity.name.tag", // html tag
             // 
             "markup.inline.raw.string.markdown", // code
+            "markup.raw.code"
           ],
           "settings": {
             "foreground": "#d087f1"
@@ -249,15 +258,11 @@
         //     "foreground": "#c86bf3"
         //   }
         // },
-
-
-        // keyword
-        {
+        { // 6// keyword
           "name": "keyword",
           "scope": [
             "keyword",
             //import、from、as
-
             //return、pass、if
             // "keyword.control",
             //==、>=、<=、!=
@@ -274,6 +279,12 @@
             "keyword.other.unit",
             //def、class、let{js}
             "storage",
+            "storage.type.js",
+            "storage.type.ts",
+            "storage.type.type",
+            "storage.type.tsx",
+            "storage.type.function",
+            "storage.type.class",
             // "storage.type",
             "storage.modifier",
             "keyword.other.typedef.c",
@@ -284,14 +295,13 @@
             "support.type.property-name", 
             "support.type.property-name.json.comments",
             // headings{#}{.md}
-            "markup.heading.markdown"
+            "markup.heading"
           ],
           "settings": {
             "foreground": "#ebe5cd"
           }
         },
-
-        {
+        { // 7 颜色 相同 
           "name": "constant",
           "scope": [
             "variable.other.constant", // 常量(变量)
@@ -306,35 +316,32 @@
             // "markup.heading.markdown",
             // "entity.name.section.markdown",
             // bold{md}
-            "markup.bold.markdown",
+            "markup.bold",
+            "string.other.strong.asterisk"
           ],
           "settings": {
             "foreground": "#e1eea1"
           }
         },
-        {
+        { // 7
           "name": "enums",
           "scope": ["variable.other.enummember"],
           "settings": { "foreground": "#e1eea1" }
         },
-
-        {
+        { // 8
           "name": "Comment",
           "scope": [
             "comment",
             // "punctuation.definition.comment",
             "string.quoted.docstring", // python docstring(用作文档的多行字符串)
-            // md
-            "markup.quote.markdown", // 引用,
           ],
           "settings": {
             "fontStyle": "italic",
             "foreground": "#848BBD",
           }
         },
-
         // module
-        {
+        { // 9
           "name": "Entity",
           "scope": [
             "entity.name.namespace"
@@ -343,17 +350,17 @@
             "foreground": "#f3a0a5"
           }
         },
-
-
-
-
         //meta.property-value.css
-        {
+        { // 10
           "name": "Variable,attribute",
           "scope": [
             //.documentElement.classList{js}
-            "support.variable.property",
-            "variable",
+            // "support.variable.property",
+            // "variable",
+            "variable.other.readwrite",
+            "meta.object-literal.key.ts",
+            "meta.object-literal.key",
+            "variable.object.property",
             "entity.name.variable",
             // "meta.function-call.arguments.python",
             // attribute-name
@@ -370,15 +377,16 @@
             //i{md}
             "markup.italic.markdown",
             //python variable
-            "markup.fenced_code.block.markdown"
+            "markup.fenced_code.block.markdown",
+            // "meta.embedded",
           ],
           "settings": {
             "foreground": "#f1c9e5",
             "fontStyle": ""
           }
         },
-
-        {
+        
+        { //  没有写颜色 不计数
             "name": "Markdown headings",
             "scope": [
               "markup.heading.markdown",
@@ -389,7 +397,7 @@
                 "fontStyle": "bold"
             }
         },
-        {
+        { // 11
           "name": "Parameter",
           "scope": [
             "variable.parameter",
@@ -400,7 +408,7 @@
             "fontStyle": "italic"
           }
         },
-        {
+        { // 12
           "name": "self or cls",
           "scope": [
             "variable.parameter.function.language.special.self",
@@ -422,14 +430,14 @@
             // "fontStyle":"",
           }
         },
-  
-        {
+        { // 13
           "name": "String",
           "scope": [
             "string.quoted.",
             "string.template",
             //C:\x\x.png{md}
             "markup.underline.link",
+            "string.other.link"
           ],
           "settings": {
             // "foreground": "#a5faec", //改为其他颜色时出现问题{重启解决{生效}}
@@ -437,8 +445,7 @@
             "fontStyle": "italic"
           }
         },
-
-        {
+        { // 14
           "name": "number",
           "scope": ["constant.numeric"],
           "settings": {
@@ -470,12 +477,13 @@
   //字体
   // "editor.fontFamily": "'Monaspace Neon'", // Radon
   // "editor.fontFamily": "'Monaspace Radon', monospace",
-  // "editor.fontFamily": "CodeNewRoman Nerd Font Mono",al10
-  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', monospace", 
+  // "editor.fontFamily": "CodeNewRoman Nerd Font Mono", il=>
+  // Mono| Propo
+  "editor.fontFamily": "JetBrainsMono Nerd Font Propo",
   "editor.fontLigatures": "'calt', 'liga', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv30', 'cv60'",
-  // calt 是 OpenType 字体功能中的一个标签，代表 "Contextual Alternates"（上下文替换）。它用于在特定上下文中替换字符，以改善文本的可读性或美观性。
-  // 'ss01',: 疑似衬线字体
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  // 'calt', 'liga', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv30', 'cv60'
+  // 'ss01', :
+  // "terminal.integrated.fontFamily": "CodeNewRoman Nerd Font Mono",
   // 样式
   "editor.cursorStyle": "block",
   // "editor.cursorWidth": 2,
@@ -571,7 +579,7 @@
   },
   "[html]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[vue]": {
     "editor.tabSize": 2,
@@ -582,11 +590,11 @@
     "editor.tabSize": 2,
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.tabSize": 2,
   },
   "[typescriptreact]" : {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.tabSize": 2,
   },
 
@@ -599,7 +607,11 @@
     "*.sql": "sql",
     "*.toml": "ini",
     "*.lock": "ini",
+    "*.mdx": "mdx",
+    "environment": "shellscript",
+    "*.webmanifest": "jsonc"
   },
+  
   "files.readonlyInclude": {
     "**/.cargo/registry/src/**/*.rs": true,
     "**/lib/rustlib/src/rust/library/**/*.rs": true,
@@ -636,7 +648,7 @@
     }
   ],
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
@@ -644,7 +656,8 @@
     "*.pyc": "default",
     "*.md": "default",
     "*.pdf": "latex-workshop-pdf-hook",
-    "*.txt": "default"
+    "*.txt": "default",
+    "*.svg": "default"
   },
 
   "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
@@ -701,26 +714,48 @@
 
   "cSpell.enableFiletypes": ["django-html"],
   "cSpell.userWords": [
+    "appendleft",
+    "archlinux",
+    "Bilibili",
+    "cout",
+    "cplusplus",
+    "denojs",
+    "Deque",
     "DESCR",
+    "DNSSEC",
     "dotenv",
     "Efron",
+    "elif",
     "endfor",
+    "fastapi",
+    "favicons",
     "figsize",
     "fullscreen",
     "Hastie",
     "helloworld",
     "Iain",
+    "itertools",
     "Johnstone",
     "katex",
+    "lanqiao",
+    "Mertens",
     "Nahida",
     "ndim",
+    "nextjs",
+    "numpy",
+    "nums",
+    "popleft",
     "println",
+    "readlines",
     "sklearn",
     "struct",
     "Structs",
+    "threejs",
     "Tibshirani",
     "ueditor",
     "viewsets",
+    "vuejs",
+    "webp",
     "xlim",
     "ylim"
   ],
@@ -977,7 +1012,7 @@
     "authProvider": "github"
   },
   "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx",
     "editor.tabSize": 2,
   },
   "workbench.activityBar.location": "bottom",
@@ -1073,6 +1108,8 @@
   "workbench.colorTheme": "SynthWave '84",
   "hediet.vscode-drawio.codeLinkActivated": true,
   "terminal.integrated.env.windows": {},
-
-  
+  "explorer.confirmDelete": false,
+  "fittencode.languagePreference.displayPreference": "zh-cn",
+  "fittencode.languagePreference.commentPreference": "zh-cn",
+  "terminal.integrated.inheritEnv": false,
 }

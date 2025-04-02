@@ -1,0 +1,18 @@
+{
+  
+  "recommendations": [
+    "bradlc.vscode-tailwindcss", // tailwindcss
+    "kamikillerto.vscode-colorizer", // 颜色预览
+    "w88975.code-translate", // 翻译插件: english to chinese
+    "wangguixuan.var-translate-en", // 翻译插件: chinese to english
+    "usernamehw.erro", // 错误提示到 line
+    "christian-kohler.path-intellisense", // 路径补全
+    "wakatime.vscode-wakatime",
+    "k--kato.intellij-idea-keybindings", // idea快捷键
+    "bierner.github-markdown-preview", // markdown预览
+    "unifiedjs.vscode-mdx",
+    "pkief.material-icon-theme", // 图标主题
+    "robbowen.synthwave-vscode", // 主题
+    "be5invis.vscode-custom-css", // 自定义css
+  ]
+}
