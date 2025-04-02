@@ -69,7 +69,6 @@
 }
 /* comment */
 .mtk8 {   color: #848BBD;
-
   text-shadow: 0 0 2px #270d3b, 0 0 8px #848BBD75, 0 0 2px #849dbd75;
 }
 /* module */
@@ -83,14 +82,16 @@
 .mtk11 {   color: rgb(241, 205, 219);
   text-shadow: 0 0 2px #db91b3, 0 0 10px #ed8dc875, 0 0 5px #f967ad75, 0 0 25px #fc1fba75;
   text-shadow: 0 0 2px #2a0114, 0 0 10px #fc069575, 0 0 5px #f5168675, 0 0 25px #fc1fba75; }
-  /* self, cls */
+/* self, cls */
 .mtk12 {   color: #f4cce5;
   text-shadow: 0 0 2px #380234, 0 0 10px #d30eff75, 0 0 5px #d312ff75, 0 0 25px #d30eff75; }
 /* str */
 .mtk13 {   color: #def2ec;
   text-shadow: 0 0 2px rgb(3, 63, 49), 0 0 3px #06fd9a75, 0 0 5px #06fd9a75, 0 0 8px #06fd9a75; }
-.mtk14 { color: rgba(255, 255, 255, 0.93); }
-.mtk15 { color: rgba(182, 177, 177, 0.8); }
+/* .mtk14 { color: rgba(255, 255, 255, 0.93); } */
+.mtk14 { color: #51c7f5; }
+/* .mtk15 { color: rgba(182, 177, 177, 0.8); } */
+.mtk15 { color: rgba(0, 255, 42, 0.8); }
 /* .mtk16 { color: #f7acd0; }
 .mtk17 { color: #f1c9e5; }
 .mtk18 { color: #f5c0d5; }
